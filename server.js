@@ -6,7 +6,7 @@ const soap = require("soap");
 
 const url = 'http://localhost:8080/Info802-TP1-1.0-SNAPSHOT/HelloWorld?wsdl';
 
-app.use(require("express").static("./"));
+app.use(require("express").static("./public"));
 
 app.get('/', function(req, res){
     res.sendfile("index.html");
