@@ -1,4 +1,4 @@
-const app = require('express')();
+const app = require("express")();
 const http = require('http').Server(app);
 const port = process.env.PORT;// || 3000;
 const io = require("socket.io")(http);
@@ -6,10 +6,10 @@ const soap = require("soap");
 
 const url = 'http://localhost:8080/Info802-TP1-1.0-SNAPSHOT/HelloWorld?wsdl';
 
-app.use(require("express").static("./"));
+app.use(require("express").static("public"));
 
 app.get('/', function(req, res){
-    res.sendfile("/public/index.html");
+    res.sendfile("./index.html");
 });
    
 http.listen(port, function(){ 
