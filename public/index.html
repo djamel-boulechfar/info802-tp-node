@@ -2,16 +2,22 @@
 
 <html>
 
-<header>
+<head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/car.png" type="image/png">
     <title>INFO802-TP</title>
-</header>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
     <script src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 
-    <p>Liste des véhicules :</p>
+    <header>
+        <img src="images/car.png">
+        <span>INFO802-TP - BOULECHFAR Djameleddine</span>
+    </header>
+
     <button onclick="recupererListeVoitures()">Récupérer</button>
 
     <ul id="ulListeVoitures"></ul>

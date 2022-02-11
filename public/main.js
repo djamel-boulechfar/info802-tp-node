@@ -5,7 +5,7 @@ function recupererListeVoitures() {
 }
 
 socket.on("ListeVoitures", function(voitures) {
-    const tableauVoitures = JSON.parse(voitures).voitures;
+    const tableauVoitures = JSON.parse(voitures);
     const ulListeVoitures = document.getElementById("ulListeVoitures");
     ulListeVoitures.innerHTML = "";
     for (let i = 0; i < tableauVoitures.length; i++) {
