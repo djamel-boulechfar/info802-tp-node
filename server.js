@@ -9,7 +9,7 @@ const request = require('request');
 const urlSoap = "https://info802tp-soap-python.herokuapp.com/?wsdl";
 
 //const urlRest = 'http://localhost:5000';
-const urlRest = 'https://info802tp-rest-python.herokuapp.com/';
+const urlRest = 'https://info802tp-rest-python.herokuapp.com';
 
 app.use(require("express").static("public"));
 
