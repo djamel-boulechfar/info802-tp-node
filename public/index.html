@@ -18,9 +18,40 @@
         <span>INFO802-TP - BOULECHFAR Djameleddine</span>
     </header>
 
-    <button onclick="recupererListeVoitures()">Récupérer la liste des voitures</button>
+    <div class="divPrincipale">
 
-    <ul id="ulListeVoitures"></ul>
+        <div class="divGauche">
+            <p>Liste des véhicules :</p>
+            <select id="selectListeVoitures" onchange="recupererInfosVoiture()">
+                <option value="none" selected disabled>Sélectionnez une voiture</option>
+            </select>
+
+            <form id="formulaireParcours">
+                <p>Infos de la voiture :</p>
+                <br>
+                <label for="inputAutonomie">Autonomie (en km) :</label>
+                <input id="inputAutonomie" type="number" readonly>
+                <br><br>
+                <label for="inputTempsDeRecharge">Temps de recharge (en minutes) : </label>
+                <input id="inputTempsDeRecharge" type="number" readonly>
+                <br><br>
+                <label for="inputDistance">Distance du parcours (en km) : </label>
+                <input id="inputDistance" type="number">
+                <br><br>
+                <label for="inputVitesseMoyenne">Vitesse moyenne (en km/h) : </label>
+                <input id="inputVitesseMoyenne" type="number">
+                <br><br>
+                <input type="submit" value="Calculer le temps de parcours">
+            </form>
+            <p id="pReponseTempsParcours"></p>
+        </div>
+
+        <div class="divDroite">
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
