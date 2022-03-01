@@ -124,6 +124,17 @@ function initMap() {
             });
         }
     });
+
+    // Autocomplétion nom des villes
+    var options = {
+        types: ['(cities)']
+    }
+
+    var inputDepart = document.getElementById("inputDepart");
+    var autocomplete1 = new google.maps.places.Autocomplete(inputDepart, options);
+
+    var inputArrivee = document.getElementById("inputArrivee");
+    var autocomplete2 = new google.maps.places.Autocomplete(inputArrivee, options);
 }
 
 socket.on("ReponseTempsParcoursAvecGoogleMaps", function(resultat) {
