@@ -52,4 +52,13 @@ io.on("connect", function(socket) {
             io.emit("ReponseTempsParcours", response.body);
         });
     });
+
+    socket.on("CalculeTempsParcoursAvecGoogleMaps", function(distanceParcours, autonomie, tempsDeRecharge, dureeParcours) {
+        request(urlRest + '/calculeTempsParcoursAvecMaps/' + distanceParcours + '/' + autonomie + '/' + tempsDeRecharge + '/' + dureeParcours, function(error, response) {
+            console.error('error:', error); // Print the error if one occurred
+            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+            console.log("Temps : " + response.body);
+            io.emit("ReponseTempsParcoursAvecGoogleMaps", response.body);
+        });
+    })
 });

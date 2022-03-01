@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: "Arial Rounded MT";
+    font-family: 'Hubballi', cursive;
     box-sizing: border-box;
 }
 
@@ -18,13 +20,17 @@ body {
 
 header {
     display: flex;
+    position: relative;
     width: 100%;
     height: 64px;
     align-items: center;
     background-color: navy;
     color: white;
-    font-size: 24px;
-    box-shadow: 0px 0px 3px rgba(0,0,0,0.25);
+    font-size: 32px;
+    white-space: nowrap;
+    box-shadow: 0px 0px 8px rgba(0,0,0,1);
+    z-index: 1;
+    overflow-x: hidden;
 }
 
 header img {
@@ -32,4 +38,106 @@ header img {
     height: 48px;
     margin-left: 16px;
     margin-right: 16px;
+}
+
+.divPrincipale {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: calc(100% - 64px);
+    z-index: 0;
+}
+
+/* ------------------------- */
+/* ----- DIV DE GAUCHE ----- */
+/* ------------------------- */
+.divGauche {
+    position: relative;
+    width: 400px;
+    min-height: 100%;
+    padding-top: 16px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    z-index: 1;
+}
+
+.divGauche h2 {
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.divGauche p {
+    margin-left: 7.5%;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#selectListeVoitures {
+    width: 85%;
+    height: 32px;
+    margin-bottom: 24px;
+    margin-left: 7.5%;
+    font-size: 20px;
+}
+
+.divGauche label {
+    margin-left: 7.5%;
+    font-size: 16px;
+}
+
+.divGauche input {
+    width: 85%;
+    height: 32px;
+    margin-left: 7.5%;
+    font-size: 20px;
+}
+
+.divGauche input[type="number"] {
+    appearance: textfield;
+}
+
+.divGauche input[type="number"]:disabled {
+    background-color: red;
+}
+
+.divGauche input[type="submit"] {
+    margin-top: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ------------------------- */
+/* ------------------------- */
+/* ------------------------- */
+
+.divDroite {
+    position: relative;
+    width: calc(1920px - 400px);
+    min-height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+#divFormulaireGoogleMaps {
+    display: flex;
+    height: 5%;
+    margin: 16px;
+}
+
+#divFormulaireGoogleMaps input {
+    height: 100%;
+    font-size: 20px;
+}
+
+#googleMap {
+    width: 100%;
+    height: 80%;
+}
+
+#divInfosTrajets {
+    height: calc(15% - 32px);
+    padding-top: 8px;
+    margin-left: 16px;
+    font-size: 20px;
 }

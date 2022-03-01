@@ -11,6 +11,7 @@
 
 <body>
     <script src="/socket.io/socket.io.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCphPuwCvFoWzXRzxB5-72wZJr-SbNG-wA&callback=initMap"></script>
 	<script type="text/javascript" src="main.js"></script>
 
     <header>
@@ -21,6 +22,9 @@
     <div class="divPrincipale">
 
         <div class="divGauche">
+
+            <h2>Calculer un temps de trajet</h2>
+
             <p>Liste des véhicules :</p>
             <select id="selectListeVoitures" onchange="recupererInfosVoiture()">
                 <option value="none" selected disabled>Sélectionnez une voiture</option>
@@ -28,7 +32,6 @@
 
             <form id="formulaireParcours">
                 <p>Infos de la voiture :</p>
-                <br>
                 <label for="inputAutonomie">Autonomie (en km) :</label>
                 <input id="inputAutonomie" type="number" readonly>
                 <br><br>
@@ -47,7 +50,18 @@
         </div>
 
         <div class="divDroite">
-
+            <div id="divFormulaireGoogleMaps">
+                <form id="formulaireGoogleMaps">
+                    <input id="inputDepart" type="text" placeholder="Départ">
+                    <input id="inputArrivee" type="text" placeholder="Arrivée">
+                    <input type="submit" value="Calculer le trajet">
+                </form>
+            </div>
+            <div id="googleMap"></div>
+            <div id="divInfosTrajets">
+                <p><b>Distance :</b> <element id="distanceTrajet"></element></p>
+                <p><b>Durée :</b> <element id="dureeTrajet"></element></p>
+            </div>
         </div>
 
     </div>
